@@ -44,6 +44,8 @@ namespace API.Controllers
                     await file.CopyToAsync(stream);
                 }
 
+                scope.Complete();
+
                 return Ok();
             }
         }
